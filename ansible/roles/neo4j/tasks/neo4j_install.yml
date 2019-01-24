@@ -1,0 +1,21 @@
+---
+#- name: Add neo4j key
+#  apt_key:
+#    url: http://debian.neo4j.org/neotechnology.gpg.key
+#    state: present
+
+- name: add new4j apt_key
+  apt_key:
+    url: https://debian.neo4j.org/neotechnology.gpg.key
+    state: present
+
+- name: repo
+  apt_repository:
+    repo: 'deb http://debian.neo4j.org/repo stable/'
+    state: present
+    filename: neo4j
+
+- name: install_neo4j
+  apt:
+    name: neo4j=2.3.12
+    state: present

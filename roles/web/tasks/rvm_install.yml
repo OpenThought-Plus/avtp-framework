@@ -1,0 +1,4 @@
+---
+tasks:
+  - name: Install RVM
+    shell: "curl -sSL get.rvm.io | sudo bash

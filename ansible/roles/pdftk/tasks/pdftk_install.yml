@@ -1,0 +1,10 @@
+- name: repo
+  apt_repository:
+    repo: 'ppa:malteworld/ppa'
+    state: present
+    filename: malteworld
+
+- name: install_pdftk
+  apt:
+    name: pdftk
+    state: present
