@@ -16,6 +16,11 @@ for **Andrew Campbell** via UpWork
 (after installing vagrant on Linux or OSX)
 
 ----
+*setup
+
+    add `ssh-add ~/.ssh/id_rsa` to your ~/.bash_profile
+    and manually run it in your shell, for first time run.
+
 *initialize your vagrant instance*
 
     cd vagrant && \
