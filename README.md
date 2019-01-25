@@ -30,6 +30,7 @@ for **Andrew Campbell** via UpWork
 
     cd vagrant && \
     ./truckingoffice-installer-runtime.sh
+    (this will take some time, as its compiling ruby, etc)
 
 *connect*
     vagrant ssh
