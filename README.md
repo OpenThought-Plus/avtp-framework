@@ -16,10 +16,19 @@ for **Andrew Campbell** via UpWork
 (after installing vagrant on Linux or OSX)
 
 ----
-*setup
+*setup*
+
+*~/.ssh/.config*
+
+    Host *
+      ForwardAgent yes
+
+** **
 
     add `ssh-add ~/.ssh/id_rsa` to your ~/.bash_profile
     and manually run it in your shell, for first time run.
+
+    make sure `curl` is installed on host (brew install curl) for OSX
 
 *initialize your vagrant instance*
 
