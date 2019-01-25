@@ -13,7 +13,7 @@
   apt_repository:
     repo: 'deb http://debian.neo4j.org/repo stable/'
     state: present
-    filename: neo4j
+    filename: neo4j-enterprise
 
 - name: install_neo4j
   apt:
