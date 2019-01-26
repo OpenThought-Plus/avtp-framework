@@ -17,3 +17,4 @@
     - { role: neo4j }
     - { role: pdftk }
     - { role: postgresql }
+    - { role: web, become: true, become_user: root }

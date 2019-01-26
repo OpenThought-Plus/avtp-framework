@@ -1,0 +1,6 @@
+---
+- include: nginx_install.yml
+- include: nginx_confs.yml
+- include: hello_world.yml
+- include: services.yml
+- include: users.yml

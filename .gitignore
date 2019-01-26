@@ -1,2 +1,4 @@
 /vagrant/.vagrant
 /vagrant/init.log
+/terraform/offline
+.DS_Store
