@@ -5,7 +5,7 @@
 
 - name: repo
   apt_repository:
-    repo: 'deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main'
+    repo: 'deb http://apt.postgresql.org/pub/repos/apt/ bionic-pgdg main'
     state: present
     filename: pgdg
 

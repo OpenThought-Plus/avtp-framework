@@ -11,6 +11,12 @@ nginx_root: /etc/nginx
 secure_perms: 0700
 
 ssh_users:
+  - name: vagrant
+    username: vagrant
+    key: "{{ lookup('file', 'users/vagrant.pub') }}"
+  - name: ubuntu
+    username: ubuntu
+    key: "{{ lookup('file', 'users/ubuntu.pub') }}"
   - name: userx
     username: userx
     key: "{{ lookup('file', 'users/userx.pub') }}"

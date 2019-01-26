@@ -3,6 +3,7 @@
   hosts: all
   become: true
   roles:
+    - { role: web, become: true, become_user: root }
     - { role: rvm.ruby,
         tags: ruby,
         rvm1_rubies: ['ruby-2.3.1'],
@@ -17,4 +18,3 @@
     - { role: neo4j }
     - { role: pdftk }
     - { role: postgresql }
-    - { role: web, become: true, become_user: root }

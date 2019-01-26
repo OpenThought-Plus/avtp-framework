@@ -9,6 +9,7 @@
 
 - name: Create Users
   user: name={{ item.username }} comment="{{ item.username }}"
+  ignore_errors: yes
     groups=admin, append=yes
   with_items:
     - "{{ ssh_users }}"
