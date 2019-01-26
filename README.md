@@ -10,6 +10,10 @@ for **Andrew Campbell** via UpWork
   * 20190123 requirements
     * git, rvm, neo4j - 2.3.12, postgres - 9.6.11, gpg2, ssh, memcached, pdftk
 
+**terraform**
+
+* see terraform/README.md for cloud provisioning instructions
+
 ----
 **usage:**
 
