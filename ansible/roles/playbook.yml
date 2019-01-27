@@ -11,7 +11,8 @@
         rvm1_install_path: '~/.rvm',
         rvm1_bundler_install: True,
         rvm1_user: 'vagrant',
-        rvm1_autolib_mode: 3
+        rvm1_autolib_mode: 3,
+        rvm1_rvm_version: 'latest'
      }
     - { role: general }
     - { role: memcached }

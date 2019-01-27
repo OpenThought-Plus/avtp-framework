@@ -1,4 +1,10 @@
 ---
+
+- name: ensure_admin_Group
+  group:
+    name: admin
+    state: present
+
 - name: sudoers
   lineinfile:
     path: /etc/sudoers
@@ -19,14 +25,21 @@
   with_items:
     - "{{ ssh_users }}"
 
-- name: create_vagrant_dot_ansible
-  file:
-    path: /home/vagrant/.ansible
-    state: directory
-    mode: 0777
+#- name: create_ubuntu_dot_ansible
+#  file:
+#    path: /home/ubuntu/.ansible/tmp
+#    state: directory
+#    mode: 0777
+#    recurse: true
+#
+#- name: create_vagrant_dot_ansible
+#  file:
+#    path: /home/vagrant/.ansible
+#    state: directory
+#    mode: 0777
 
-- name: create_vagrant_dot_ansible_tmp
-  file:
-    src: '/home/ubuntu/.ansible/tmp'
-    dest: '/home/vagrant/.ansible/tmp'
-    state: link
+#- name: create_vagrant_dot_ansible_tmp
+#  file:
+#    src: '/home/ubuntu/.ansible/tmp'
+#    dest: '/home/vagrant/.ansible/tmp'
+#    state: link
