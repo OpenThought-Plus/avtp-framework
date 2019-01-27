@@ -48,7 +48,7 @@ resource "aws_security_group" "default" {
 
 
 resource "aws_instance" "web" {
-  ami = "ami-8803e0f0"
+  ami = "ami-012fd5eb46f56731f"
   instance_type = "t1.micro"
   security_groups = ["terraformz"]
   key_name="terraform"
