@@ -7,3 +7,8 @@
 /terraform/terraform.tfstate*
 /packer/packer_build.tf
 .DS_Store
+
+/packer/terraform/.terraform/
+/packer/terraform/packer_build.json
+/packer/terraform/packer_find.json
+/packer/terraform/*tfstate*

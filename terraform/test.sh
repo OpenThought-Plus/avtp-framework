@@ -13,6 +13,6 @@ echo HTTPS
 echo
 curl --insecure http://${IP}
 
-echo "Press a key to ssh into aws as ubuntuuser"; read
+echo "Press a key to ssh into aws as ubuntu"; read
 echo SSH
 ssh -i offline/user-ssh-keys/ubuntu ubuntu@${IP}

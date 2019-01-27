@@ -1,4 +1,6 @@
-----
+#TERRAFORM
+    develop . deploy . configure
+--
 **usage:**
 
 init, provision, run playbook and test, then destroy
@@ -20,6 +22,18 @@ init, provision, run playbook and test, then destroy
 ansible-playbook --inventory-file=hosts.ini roles/playbook.yml
 ```
 *requires a local copy of ansible*
+----
+#PACKER
+        develop . configure . deploy
+        
+* benefits
+
+        reduced deploy times
+            pre-builds from ansible
+        eliminates software build network dependancy failures
+        
+    
+
 
 --
 
