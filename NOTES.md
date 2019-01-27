@@ -1,6 +1,7 @@
 ##NOTES
 
 * Build Times ::
- * initial terraform :: 19min
- * packer deploy :: 
-  
+ * vanilla terraform per instance :: 19min
+ * or 1 packer build :: 19min
+ * packer test or deploy with ansible prov :: 3min
+ * packer deploy, no provisioner :: time to extract ami; ~0min

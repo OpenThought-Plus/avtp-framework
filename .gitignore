@@ -12,3 +12,8 @@
 /packer/terraform/packer_build.json
 /packer/terraform/packer_find.json
 /packer/terraform/*tfstate*
+/packer/terraform/hosts.ini
+
+/packer/terraform-from-packer/*tfstate*
+/packer/terraform-from-packer/.terraform
+/packer/terraform-from-packer/hosts.ini
