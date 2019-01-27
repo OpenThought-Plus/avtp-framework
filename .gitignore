@@ -5,4 +5,5 @@
 /terraform/offline
 /terraform/hosts.ini
 /terraform/terraform.tfstate*
+/packer/packer_build.tf
 .DS_Store
