@@ -1,6 +1,6 @@
 /vagrant/.vagrant
 /vagrant/init.log
-/terraform/.terraform
+/terraform/.terraform*
 /terraform/offline
 /terraform/hosts.ini
 /terraform/terraform.tfstate*

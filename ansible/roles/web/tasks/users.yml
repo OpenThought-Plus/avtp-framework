@@ -9,8 +9,8 @@
 
 - name: Create Users
   user: name={{ item.username }} comment="{{ item.username }}"
-  ignore_errors: yes
     groups=admin, append=yes
+  ignore_errors: yes
   with_items:
     - "{{ ssh_users }}"
 
@@ -18,3 +18,15 @@
   authorized_key: user={{ item.username }} key="{{ item.key }}"
   with_items:
     - "{{ ssh_users }}"
+
+- name: create_vagrant_dot_ansible
+  file:
+    path: /home/vagrant/.ansible
+    state: directory
+    mode: 0777
+
+- name: create_vagrant_dot_ansible_tmp
+  file:
+    src: '/home/ubuntu/.ansible/tmp'
+    dest: '/home/vagrant/.ansible/tmp'
+    state: link
