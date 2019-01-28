@@ -34,15 +34,10 @@ for **Andrew Campbell** via UpWork
 
     make sure `curl` is installed on host (brew install curl) for OSX
 
-*initialize your vagrant instance*
+*initialize your vagrant instance with ansible*
 
     cd vagrant && \
     ./init.sh
-
-*run the playbook*
-
-    cd vagrant && \
-    ./truckingoffice-installer-runtime.sh
     (this will take some time, as its compiling ruby, etc)
 
 *connect*
