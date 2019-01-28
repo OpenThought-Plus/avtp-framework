@@ -1,0 +1,4 @@
+additional packages: man, vim
+ruby-2.2.4
+change neo4j config
+to-dev machine (vagrant) and to-test machine (vagrant)
