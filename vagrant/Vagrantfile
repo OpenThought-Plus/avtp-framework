@@ -16,7 +16,6 @@ Vagrant.configure("2") do |config|
   #  inline: "echo -e '#{File.read("#{Dir.home}/.gitconfig")}' > '/home/vagrant/.gitconfig'"
 
   config.vm.provision "trucking", type: "ansible" do |ansible|
-    ansible.verbose = "vvv"
     ansible.playbook = "../ansible/roles/playbook.yml"
     run = "always"
   end

@@ -31,6 +31,6 @@ ansible-galaxy install rvm.ruby || { echo "install ansible-galaxy and re-run thi
 ssh-add ~/.ssh/id_rsa
 vagrant_init && log_status $? "vagrant initialized"
 vagrant up && \
-vagrant provision --provision-with ansible-installer && \
+vagrant provision && \
   log_status $? "vagrant-ansible install/update success" || \
   log_status $? "vagrant-ansible install failed"

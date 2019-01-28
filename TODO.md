@@ -24,5 +24,8 @@
   * key_pairs on aws
   * security-groups on aws
   * running instances (which is why we want a sep account for packer)
+  * remove anislble/roles/roles symlink
+    * with shared script/functions (above) and
+    * reconfig Vagrantfile, terraform skels
 
   
