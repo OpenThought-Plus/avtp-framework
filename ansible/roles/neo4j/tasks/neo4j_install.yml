@@ -19,3 +19,22 @@
   apt:
     name: neo4j=2.3.12
     state: present
+
+- template:
+    src: neo4j.properties.j2
+    dest: /etc/neo4j/neo4j.properties
+    owner: neo4j
+    group: adm
+    mode: 0644
+
+- template:
+    src: neo4j.j2
+    dest: /etc/default/neo4j
+    owner: root
+    group: root
+    mode: 0644
+
+- name: restart_neo4j
+  service:
+    name: neo4j
+    state: restarted

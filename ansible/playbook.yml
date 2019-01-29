@@ -3,17 +3,17 @@
   hosts: all
   become: true
   roles:
+    - { role: general }
     - { role: rvm.ruby,
         tags: ruby,
-        rvm1_rubies: ['ruby-2.3.1'],
+        rvm1_rubies: ['ruby-2.2.4', 'ruby-2.2.7'],
         rvm1_install_flags: '--user-install',
         rvm1_install_path: '~/.rvm',
-        rvm1_bundler_install: True,
+        rvm1_bundler_install: False,
         rvm1_user: 'vagrant',
         rvm1_autolib_mode: 3
      }
-    - { role: general }
+    - { role: postgresql }
     - { role: memcached }
     - { role: neo4j }
     - { role: pdftk }
-    - { role: postgresql }

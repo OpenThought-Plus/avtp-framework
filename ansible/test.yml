@@ -1,0 +1,15 @@
+---
+- name: debug
+  hosts: all
+  become: true
+  roles:
+    - { role: _test }
+  roles:
+    - { role: rvm.ruby,
+        tags: ruby,
+        rvm1_install_flags: '--user-install',
+       rvm1_install_path: '~/.rvm',
+        rvm1_bundler_install: True,
+        rvm1_user: 'vagrant',
+        rvm1_autolib_mode: 3
+     }
