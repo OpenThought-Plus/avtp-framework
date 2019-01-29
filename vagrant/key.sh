@@ -1,4 +1,4 @@
 #!/bin/bash
 
-ssh-add key ~/.ssh/passwd
+ssh-add key ~/.ssh/id_rsa
 bash -c "./init.sh test"
