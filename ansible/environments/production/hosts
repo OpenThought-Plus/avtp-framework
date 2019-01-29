@@ -1,0 +1,14 @@
+default
+
+[webservers]
+web01
+web02
+
+[postgresql]
+pg01
+
+[graph]
+graph01
+
+[jobs]
+jobs01

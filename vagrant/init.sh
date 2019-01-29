@@ -4,7 +4,8 @@
 ## rev 20190123 c3w@juicypop.net
 ##
 
-if [ ! ${1} ]; then { echo "Usage: ./init.sh [dev|test]"; exit 1; }; fi
+#{host} to-be-implemented
+if [ ! ${1} ]; then { echo "Usage: ./init.sh [dev|test|staging|production] [host]"; exit 1; }; fi
 export VAGRANT_BUILD_ENV="${1}"
 
 vagrant_box_url="https://app.vagrantup.com/aspyatkin/boxes/ubuntu-18.04-server"
