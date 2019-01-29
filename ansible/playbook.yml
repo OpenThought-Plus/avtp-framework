@@ -1,5 +1,5 @@
 ---
-- name: Configure servers with ruby support system wide
+- name: global_installs
   hosts: all
   become: true
   roles:
@@ -21,3 +21,4 @@
     - { role: memcached }
     - { role: neo4j }
     - { role: pdftk }
+#    - { role: newrelic, when: "{{ build_env }}" == "production" }
