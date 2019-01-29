@@ -1,0 +1,33 @@
+# vagrants
+
+dev:
+    * all packages, rubies, services we've done so far
+    * Execute a shell script to setup database?...shell script should create superuser database user called "root" with password "qwerty" (we'd want to be able to modify this as needed?)
+test:
+    * all packages, rubies,
+    * Execute a shell script to setup database?...shell script should create superuser database user called "root" with password "qwerty" (we'd want to be able to modify this as needed?)
+    * Additional config for neo4j (should sever on port 7676). I'll provide that
+
+
+# real servers
+
+We need to be able to ssh to all of them, ideally via a trucking_office user. we do this now via collecting the pub ssh keys from our github accounts
+In production the database backups will be triggered from cron on the postgres database server. So, the postgres server will need to be able to trigger a backup script remotely.
+
+staging & feature:
+    * duplicate servers, just like the dev vagrant
+
+production:
+    All production servers will need to have the newrelic and logentries agents.
+    webhead1, webhead2:
+        * all packages except postgres, neo4j, memcached
+        * ruby 2.2.7
+        * WILL NEED nginx
+    database:
+        * all packages except neo4j, memcached
+        * ruby 2.2.7
+    graph:
+        * all packages except postgres, memcached
+        * ruby 2.2.4
+        * WILL NEED nginx
+
