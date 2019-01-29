@@ -6,13 +6,17 @@
     - { role: general }
     - { role: rvm.ruby,
         tags: ruby,
+        rvm1_rvm_version: 'stable',
         rvm1_rubies: ['ruby-2.2.4', 'ruby-2.2.7'],
         rvm1_install_flags: '--user-install',
         rvm1_install_path: '~/.rvm',
         rvm1_bundler_install: False,
+        rvm1_bundler_version: 1.17.3, # PR @ https://github.com/rvm/rvm1-ansible/pull/191/commits/4f52d00a83e96e69334c86c066371e1b7907d3a1
+
         rvm1_user: 'vagrant',
         rvm1_autolib_mode: 3
      }
+    - { role: rvm_bundler }
     - { role: postgresql }
     - { role: memcached }
     - { role: neo4j }
