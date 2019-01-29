@@ -1,2 +1,7 @@
 ---
-- include: git_install.yml
+- include: install.yml
+
+- name: environment_txt
+  template:
+    src: environment.txt.j2
+    dest: /home/vagrant/environment.txt

@@ -1,8 +1,12 @@
-#!/bin/bash -x
+#!/bin/bash
 
 ### TruckingOffice
 ## rev 20190123 c3w@juicypop.net
 ##
+
+#{host} to-be-implemented
+if [ ! ${1} ]; then { echo "Usage: ./init.sh [dev|test|staging|production] [host]"; exit 1; }; fi
+export VAGRANT_BUILD_ENV="${1}"
 
 vagrant_box_url="https://app.vagrantup.com/aspyatkin/boxes/ubuntu-18.04-server"
 vagrant_box="aspyatkin/ubuntu-18.04-server"
@@ -31,6 +35,6 @@ ansible-galaxy install rvm.ruby || { echo "install ansible-galaxy and re-run thi
 ssh-add ~/.ssh/id_rsa
 vagrant_init && log_status $? "vagrant initialized"
 vagrant up && \
-vagrant provision --provision-with ansible-installer && \
+vagrant provision && \
   log_status $? "vagrant-ansible install/update success" || \
   log_status $? "vagrant-ansible install failed"

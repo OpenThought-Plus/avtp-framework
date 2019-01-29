@@ -9,6 +9,16 @@
     state: present
     filename: pgdg
 
+- name: install_libpq_dev
+  apt:
+    name: libpq-dev
+    state: present
+
+- name: install_postgresql_contrib
+  apt:
+    name: postgresql-contrib
+    state: present
+
 - name: install_postgresql
   apt:
     name: postgresql-9.6

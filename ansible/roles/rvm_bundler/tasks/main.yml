@@ -1,0 +1,8 @@
+---
+- name: rubygems | install bundler
+  command: bash -c "source $HOME/.bash_profile && rvm use 2.2.4 && gem install bundler -v 1.17.3"
+  become_user: vagrant
+
+- name: rubygems | install bundler
+  command: bash -c "source $HOME/.bash_profile && rvm use 2.2.7 && gem install bundler -v 1.17.3"
+  become_user: vagrant

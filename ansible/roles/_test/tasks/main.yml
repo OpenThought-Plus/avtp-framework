@@ -1,0 +1,3 @@
+---
+- name: neo4j_properties
+  template: src=neo4j.conf.j2 dest=/home/vagrant/neo4j.conf

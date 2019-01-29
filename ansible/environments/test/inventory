@@ -1,0 +1,5 @@
+[site]
+test
+
+[site:vars]
+variable=true

@@ -1,0 +1,27 @@
+---
+
+- name: install_software_properties_common
+  apt:
+    name: software-properties-common
+    state: present
+    update_cache: yes
+
+- name: install_curl
+  apt:
+    name: curl
+    state: present
+
+- name: install_vim
+  apt:
+    name: vim
+    state: present
+
+- name: install_git
+  apt:
+    name: git
+    state: present
+
+- name: install_man_db
+  apt:
+    name: man-db
+    state: present
