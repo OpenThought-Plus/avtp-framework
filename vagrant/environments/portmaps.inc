@@ -1,4 +1,4 @@
-_strings="ports_443_8443 ports_80_8800"
+_strings="ports_443_8843 ports_443_8843 ports_80_8880 ports_80_8880"
 
 ports_443_8443='config.vm.network \"forwarded_port\", guest: 443, host: 8443'
 ports_443_8843='config.vm.network \"forwarded_port\", guest: 443, host: 8843'

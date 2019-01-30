@@ -16,6 +16,7 @@ if [ ! -d "${VAGRANT_BUILD_ENV}" ]; then { mkdir "${VAGRANT_BUILD_ENV}"; }; fi
 
 # skel
 . ./portmaps.inc
+#for _ports in ${_VAGRANT_BUILD_ENV}${_VAGRENT_HOST}; do {
 for _strings in ${_strings}; do {
 _build+="%%${_strings}%%/${!_strings}/g;s/"
 }; done
@@ -29,4 +30,4 @@ cd "${VAGRANT_BUILD_ENV}"
 ssh-add ~/.ssh/id_rsa
 
 # run action
-bash -c "../../_actions/${VAGRANT_FUNCTION}.sh ${1} ${2}"
+#bash -c "../../_actions/${VAGRANT_FUNCTION}.sh ${2} ${3}"
