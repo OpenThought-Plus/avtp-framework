@@ -30,4 +30,4 @@ cd "${VAGRANT_BUILD_ENV}"
 ssh-add ~/.ssh/id_rsa
 
 # run action
-#bash -c "../../_actions/${VAGRANT_FUNCTION}.sh ${2} ${3}"
+bash -c "../../_actions/${VAGRANT_FUNCTION}.sh ${2} ${3}"
