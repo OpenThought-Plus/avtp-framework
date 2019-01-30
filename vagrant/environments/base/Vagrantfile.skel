@@ -4,6 +4,7 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "aspyatkin/ubuntu-18.04-server"
   %%ports_443_8443%%
+  %%ports_80_8800%%
   config.ssh.forward_agent = true
 
 #  config.vm.provider "virtualbox" do |v|

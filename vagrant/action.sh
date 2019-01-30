@@ -16,15 +16,17 @@ if [ ! -d "${VAGRANT_BUILD_ENV}" ]; then { mkdir "${VAGRANT_BUILD_ENV}"; }; fi
 
 # skel
 . ./portmaps.inc
-for line in $"${VAGRANT_BUILD_ENV}_${VAGRENT_HOST}"; do {
-_map=${!line}; map=${!_map}
-  sed -e "s/%%${!line}%%/${map}/g" base/Vagrantfile.skel \
-    > "${VAGRANT_BUILD_ENV}/Vagrantfile"
+for _strings in ${_strings}; do {
+_build+="%%${_strings}%%/${!_strings}/g;s/"
 }; done
+build=$(echo ${_build} | sed -e 's/s\/$//g;')
+
+ sed -e "s/${build}" base/Vagrantfile.skel \
+    > "${VAGRANT_BUILD_ENV}/Vagrantfile"
 
 cd "${VAGRANT_BUILD_ENV}"
 # for passwd'd ssh keys
 ssh-add ~/.ssh/id_rsa
 
 # run action
-#bash -c "../../_actions/${VAGRANT_FUNCTION}.sh ${1} ${2}"
+bash -c "../../_actions/${VAGRANT_FUNCTION}.sh ${1} ${2}"
