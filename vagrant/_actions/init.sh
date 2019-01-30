@@ -7,6 +7,7 @@
 #{host} to-be-implemented
 if [ ! ${1} ]; then { echo "Usage: ./init.sh [dev|test|staging|production] [host]"; exit 1; }; fi
 export VAGRANT_BUILD_ENV="${1}"
+export VAGRANT_HOST="${2}"
 
 vagrant_box_url="https://app.vagrantup.com/aspyatkin/boxes/ubuntu-18.04-server"
 vagrant_box="aspyatkin/ubuntu-18.04-server"

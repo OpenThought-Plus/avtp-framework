@@ -25,3 +25,8 @@
   apt:
     name: man-db
     state: present
+
+- name: install_libpq_dev
+  apt:
+    name: libpq-dev
+    state: present

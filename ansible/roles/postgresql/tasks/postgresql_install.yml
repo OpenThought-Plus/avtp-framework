@@ -1,3 +1,8 @@
+- name: install_postgresql_contrib
+  apt:
+    name: postgresql-contrib
+    state: present
+
 - name: add new4j apt_key
   apt_key:
     url: https://www.postgresql.org/media/keys/ACCC4CF8.asc
