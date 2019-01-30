@@ -33,9 +33,9 @@ for **Andrew Campbell** via UpWork
 *provision your vagrant instance*
 *per ENVIRONMENT*
 
-    cd vagrant && \
-    ./init.sh [dev|test]
-
+    cd vagrant
+    ./action.sh [help]
+    
 *connect*
     vagrant ssh
 

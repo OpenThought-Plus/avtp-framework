@@ -21,4 +21,6 @@
     - { role: memcached }
     - { role: neo4j }
     - { role: pdftk }
+    - { role: nginx }
+#web and graph
 #    - { role: newrelic, when: "{{ build_env }}" == "production" }
