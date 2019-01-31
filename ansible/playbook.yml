@@ -17,10 +17,10 @@
         rvm1_autolib_mode: 3
      }
     - { role: rvm_bundler }
-    - { role: postgresql }
+    - { role: postgresql, when: build_env  == 'db01'}
     - { role: memcached }
     - { role: neo4j }
     - { role: pdftk }
     - { role: nginx }
     - { role: logentries }
-#    - { role: newrelic, when: "{{ build_env }}" == "production" }
+    - { role: newrelic, when: build_env  == 'production' }

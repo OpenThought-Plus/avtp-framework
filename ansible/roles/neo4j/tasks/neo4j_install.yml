@@ -4,7 +4,7 @@
 #    url: http://debian.neo4j.org/neotechnology.gpg.key
 #    state: present
 
-- name: add new4j apt_key
+- name: add neo4j apt_key
   apt_key:
     url: https://debian.neo4j.org/neotechnology.gpg.key
     state: present

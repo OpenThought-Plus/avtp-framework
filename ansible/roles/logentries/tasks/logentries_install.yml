@@ -5,7 +5,7 @@
 
 - name: logentries_repo
   apt_repository:
-    repo: "deb http://rep.logentries.com bionic stable/"
+    repo: 'deb http://rep.logentries.com bionic main'
     state: present
     filename: logentries-daemon
 
@@ -28,4 +28,4 @@
 #    name: logentries-daemon
 #    state: present
 
-##start
+##star

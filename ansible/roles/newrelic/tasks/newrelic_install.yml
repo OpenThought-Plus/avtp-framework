@@ -1,8 +1,4 @@
 ---
-#- name: Add neo4j key
-#  apt_key:
-#    url: http://debian.neo4j.org/neotechnology.gpg.key
-#    state: present
 
 - name: add_newrelic_apt_key
   apt_key:
@@ -11,7 +7,7 @@
 
 - name: new_relic_repo
   apt_repository:
-    repo: 'deb https://download.newrelic.com/infrastructure_agent/linux/apt stable/'
+    repo: 'deb https://download.newrelic.com/infrastructure_agent/linux/apt/dists stable/'
     state: present
     filename: newrelic-infra
 

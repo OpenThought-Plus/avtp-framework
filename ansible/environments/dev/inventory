@@ -3,3 +3,4 @@ dev
 
 [site:vars]
 variable=true
+newrelic=true
