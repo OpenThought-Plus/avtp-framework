@@ -1,6 +1,5 @@
 .idea
 /ansible/roles/*retry
-/vagrant/.vagrant
 /vagrant/init.log
 /terraform/.terraform*
 /terraform/offline
@@ -19,5 +18,6 @@
 /packer/terraform-from-packer/.terraform
 /packer/terraform-from-packer/hosts.ini
 
-/vagrant/environments/**/init.log
-/vagrant/environments/**/Vagrantfile
+**/.vagrant
+vagrant/**/Vagrantfile
+vagrant/**/init.log

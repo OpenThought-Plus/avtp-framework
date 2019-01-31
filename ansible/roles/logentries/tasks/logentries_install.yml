@@ -1,0 +1,31 @@
+---
+
+- name: logentries_keyserver
+  shell: 'gpg --keyserver keyserver.ubuntu.com --recv-keys A5270289C43C79AD && gpg -a --export A5270289C43C79AD | apt-key add -'
+
+- name: logentries_repo
+  apt_repository:
+    repo: "deb http://rep.logentries.com bionic stable/"
+    state: present
+    filename: logentries-daemon
+
+- name: install_python_settproctitle
+  apt:
+    name: python-setproctitle
+    state: present
+
+#------le register
+
+#- template:
+#    src: logentries-infra.yml.j2
+#    dest: /etc/logentries-infra.yml
+#    owner: root
+#    group: root
+#    mode: 0644
+
+#- name: install_logentries_daemon
+#  apt:
+#    name: logentries-daemon
+#    state: present
+
+##start
