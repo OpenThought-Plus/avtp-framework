@@ -23,6 +23,7 @@ _build+="%%${_strings}%%/${!_strings}/g;s/"
 build=$(echo ${_build} | sed -e 's/s\/$//g;')
 
  sed -e "s/${build}" base/Vagrantfile.skel \
+    | grep -v -e "%%.*%%$" \
     > "${VAGRANT_BUILD_ENV}/Vagrantfile"
 
 cd "${VAGRANT_BUILD_ENV}"
