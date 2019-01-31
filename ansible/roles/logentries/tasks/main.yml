@@ -1,0 +1,2 @@
+---
+- include: logentries_install.yml

@@ -9,7 +9,7 @@
     name: nginx
     state: started
 
-- name: prep_html_tree ## move to common? ##c3w##
+- name: prep_html_tree
   file:
     path: "{{ html_dir }}"
     state: directory

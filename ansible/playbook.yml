@@ -22,5 +22,5 @@
     - { role: neo4j }
     - { role: pdftk }
     - { role: nginx }
-#web and graph
+    - { role: logentries }
 #    - { role: newrelic, when: "{{ build_env }}" == "production" }

@@ -1,0 +1,35 @@
+---
+#- name: Add neo4j key
+#  apt_key:
+#    url: http://debian.neo4j.org/neotechnology.gpg.key
+#    state: present
+
+- name: add_logentries_apt_key
+  apt_key:
+    url: hkp://keyserver.ubuntu.com:80
+    id: A5270289C43C79AD
+    state: present
+
+- name: add_logentries_apt_key
+  apt_key:
+    url: hkp://pgp.mit.com:80 
+    id: A5270289C43C79AD
+    state: present
+
+- name: logentries_repo
+  apt_repository:
+    repo: 'deb http://rep.logentries.com/ stable/'
+    state: present
+    filename: logentries-daemon
+
+- name: install_logentries
+  apt:
+    name: logentries-infra
+    state: present
+
+#- template:
+#    src: logentries-infra.yml.j2
+#    dest: /etc/logentries-infra.yml
+#    owner: root
+#    group: root
+#    mode: 0644

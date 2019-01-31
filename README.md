@@ -35,7 +35,9 @@ for **Andrew Campbell** via UpWork
 
     cd vagrant
     ./action.sh [help]
-    
+
+see vagrant/environments/portmap.inc for multi-vagrant to host network mapping    
+
 *connect*
     vagrant ssh
 
