@@ -33,7 +33,7 @@ function vagrant_init {
 ### DEPS
 ansible-galaxy install rvm.ruby || { echo "install ansible-galaxy and re-run this installer"; exit 1; };
 vagrant_init && log_status $? "vagrant initialized";
-vagrant up && \
-vagrant provision && \
+vagrant up ${VAGRANT_HOST} && \
+vagrant provision ${VAGRANT_HOST} && \
   log_status $? "vagrant-ansible install/update success" || \
   log_status $? "vagrant-ansible install failed"
